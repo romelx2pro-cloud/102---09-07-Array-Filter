@@ -1,87 +1,157 @@
+// // const nums = [34, 35, 67, 54, 109, 102, 32, 9];
+
+// // const odds = nums.filter(n => n % 2 === 1);
+// // const evens = nums.filter(n => n % 2 === 0);
+// // const bigNums = nums.filter(n => n > 50);
+
+// // const books = [{
+// //     title: 'Good Omens',
+// //     authors: ['Terry Pratchett', 'Neil Gaiman'],
+// //     rating: 4.25,
+// //     genres: ['fiction', 'fantasy']
+// //   },
+// //   {
+// //     title: 'Changing My Mind',
+// //     authors: ['Zadie Smith'],
+// //     rating: 3.83,
+// //     genres: ['nonfiction', 'essays']
+// //   },
+// //   {
+// //     title: 'Bone: The Complete Edition',
+// //     authors: ['Jeff Smith'],
+// //     rating: 4.42,
+// //     genres: ['fiction', 'graphic novel', 'fantasy']
+// //   },
+// //   {
+// //     title: 'American Gods',
+// //     authors: ['Neil Gaiman'],
+// //     rating: 4.11,
+// //     genres: ['fiction', 'fantasy']
+// //   },
+// //   {
+// //     title: 'A Gentleman in Moscow',
+// //     authors: ['Amor Towles'],
+// //     rating: 4.36,
+// //     genres: ['fiction', 'historical fiction']
+// //   },
+// //   {
+// //     title: 'The Name of the Wind',
+// //     authors: ['Patrick Rothfuss'],
+// //     rating: 4.54,
+// //     genres: ['fiction', 'fantasy']
+// //   },
+// //   {
+// //     title: 'The Overstory',
+// //     authors: ['Richard Powers'],
+// //     rating: 4.19,
+// //     genres: ['fiction', 'short stories']
+// //   },
+// //   {
+// //     title: 'The Way of Kings',
+// //     authors: ['Brandon Sanderson'],
+// //     rating: 4.65,
+// //     genres: ['fantasy', 'epic']
+// //   },
+// //   {
+// //     title: 'Lord of the flies',
+// //     authors: ['William Golding'],
+// //     rating: 3.67,
+// //     genres: ['fiction']
+// //   }
+// // ]
+
+// // //All books rated over 4.3:
+// // const goodBooks = books.filter(b => b.rating > 4.3);
+
+// // // All books with fantasy as a genre:
+// // const fantasyBooks = books.filter(book => (
+// //   book.genres.includes('fantasy')
+// // ))
+
+// // // all books that are either short stories or essays:
+// // const shortForm = books.filter(book => (
+// //   book.genres.includes('short stories') || book.genres.includes('essays')
+// // ))
+
+// // // Simple search functionality:
+// // const query = 'The';
+// // const results = books.filter(book => {
+// //   const title = book.title.toLowerCase();
+// //   return title.includes(query.toLowerCase())
+// // })
 // const nums = [34, 35, 67, 54, 109, 102, 32, 9];
-
-// const odds = nums.filter(n => n % 2 === 1);
-// const evens = nums.filter(n => n % 2 === 0);
-// const bigNums = nums.filter(n => n > 50);
-
-// const books = [{
-//     title: 'Good Omens',
-//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+// const o = nums.filter((n) => n % 2 === 0);
+// const b = nums.filter((n) => n >= 50);
+// // console.log(b);
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
 //     rating: 4.25,
-//     genres: ['fiction', 'fantasy']
+//     genres: ["fiction", "fantasy"],
 //   },
 //   {
-//     title: 'Changing My Mind',
-//     authors: ['Zadie Smith'],
+//     title: "Changing My Mind",
+//     authors: ["Zadie Smith"],
 //     rating: 3.83,
-//     genres: ['nonfiction', 'essays']
+//     genres: ["nonfiction", "essays"],
 //   },
 //   {
-//     title: 'Bone: The Complete Edition',
-//     authors: ['Jeff Smith'],
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
 //     rating: 4.42,
-//     genres: ['fiction', 'graphic novel', 'fantasy']
+//     genres: ["fiction", "graphic novel", "fantasy"],
 //   },
 //   {
-//     title: 'American Gods',
-//     authors: ['Neil Gaiman'],
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
 //     rating: 4.11,
-//     genres: ['fiction', 'fantasy']
+//     genres: ["fiction", "fantasy"],
 //   },
 //   {
-//     title: 'A Gentleman in Moscow',
-//     authors: ['Amor Towles'],
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
 //     rating: 4.36,
-//     genres: ['fiction', 'historical fiction']
+//     genres: ["fiction", "historical fiction"],
 //   },
 //   {
-//     title: 'The Name of the Wind',
-//     authors: ['Patrick Rothfuss'],
+//     title: "The Name of the Wind",
+//     authors: ["Patrick Rothfuss"],
 //     rating: 4.54,
-//     genres: ['fiction', 'fantasy']
+//     genres: ["fiction", "fantasy"],
 //   },
 //   {
-//     title: 'The Overstory',
-//     authors: ['Richard Powers'],
+//     title: "The Overstory",
+//     authors: ["Richard Powers"],
 //     rating: 4.19,
-//     genres: ['fiction', 'short stories']
+//     genres: ["fiction", "short stories"],
 //   },
 //   {
-//     title: 'The Way of Kings',
-//     authors: ['Brandon Sanderson'],
+//     title: "The Way of Kings",
+//     authors: ["Brandon Sanderson"],
 //     rating: 4.65,
-//     genres: ['fantasy', 'epic']
+//     genres: ["fantasy", "epic"],
 //   },
 //   {
-//     title: 'Lord of the flies',
-//     authors: ['William Golding'],
+//     title: "Lord of the flies",
+//     authors: ["William Golding"],
 //     rating: 3.67,
-//     genres: ['fiction']
-//   }
-// ]
-
-// //All books rated over 4.3:
-// const goodBooks = books.filter(b => b.rating > 4.3);
-
-// // All books with fantasy as a genre:
-// const fantasyBooks = books.filter(book => (
-//   book.genres.includes('fantasy')
-// ))
-
-// // all books that are either short stories or essays:
-// const shortForm = books.filter(book => (
-//   book.genres.includes('short stories') || book.genres.includes('essays')
-// ))
-
-// // Simple search functionality:
-// const query = 'The';
-// const results = books.filter(book => {
-//   const title = book.title.toLowerCase();
-//   return title.includes(query.toLowerCase())
-// })
+//     genres: ["fiction"],
+//   },
+// ];
+// let gbr = books.filter((b) => b.rating > 4.3);
+// // console.log(gbr);
+// const f = books.filter((b) => b.genres.includes("fantasy"));
+// // console.log(f);
+// const se = books.filter(
+//   (b) => b.genres.includes("essays") || b.genres.includes("short stories"),
+// );
+// // console.log(se);
+// const the = books.filter((b) => b.title.toLowerCase().includes("the"));
+// console.log(the);
 const nums = [34, 35, 67, 54, 109, 102, 32, 9];
-const o = nums.filter((n) => n % 2 === 0);
-const b = nums.filter((n) => n >= 50);
+const f = nums.filter((n) => n % 2 === 1);
+const b = nums.filter((n) => n > 50);
 // console.log(b);
 const books = [
   {
@@ -139,13 +209,12 @@ const books = [
     genres: ["fiction"],
   },
 ];
-let gbr = books.filter((b) => b.rating > 4.3);
-// console.log(gbr);
-const f = books.filter((b) => b.genres.includes("fantasy"));
-// console.log(f);
-const se = books.filter(
-  (b) => b.genres.includes("essays") || b.genres.includes("short stories"),
-);
-// console.log(se);
-const the = books.filter((b) => b.title.toLowerCase().includes("the"));
-console.log(the);
+// const hrb = books.filter((b) => b.rating > 4.3);
+// const gif = books.filter((b) => b.genres.includes("fantasy"));
+// const sf = books.filter(
+//   (b) => b.genres.includes("short stories") || b.genres.includes("essays"),
+// );
+// console.log(sf);
+const q = "The";
+const sb = books.filter((n) => n.title.toLowerCase().includes(q.toLowerCase()));
+console.log(sb);
